@@ -9,8 +9,8 @@
  "dependencies": {
     "distube": "^2.8.11",
     "@distube/youtube-dl": "^1.0.4",
-    "os": "^0.1.1",
-    "fs": "^0.0.2",
+    "os@": "^0.1.1",
+    "fs@": "^0.0.2",
     "discord.js": "^12.5.1"
   }
 }
