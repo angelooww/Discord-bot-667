@@ -1,0 +1,11 @@
+{
+  "name": "distube-example",
+  "version": "1.0.0",
+  "description": "DisTube example music bot.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+    
+  }
+  
+}
