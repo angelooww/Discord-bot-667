@@ -18,7 +18,7 @@
 - 📷 Get Avatar
 - 📑 And others !
 
-### Requirements
+## Requirements
 
 - [discord.js](https://discord.js.org) v12 or v13 - `npm install discord.js`
 - [Distube](https://distube.js.org/#/) - `npm install distube`
