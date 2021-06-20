@@ -2,7 +2,7 @@ const { get } = require("request-promise-native");
 const { MessageEmbed } = require("discord.js")
 
 module.exports = {
-  name: "anime",
+  name: "animeinfo",
   aliases: ["kitsu"],
   description: "Get anime information",
   run: (client, message, args) => {

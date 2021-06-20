@@ -14,7 +14,6 @@ module.exports = {
 		})
 
 		let searchString = args.join("%20")
-		let searchPage = args.join("")
 
 		let embed = new discord.MessageEmbed()
 			.setAuthor("Recherche en cours....", client.user.displayAvatarURL())
