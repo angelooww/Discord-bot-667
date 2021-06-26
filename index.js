@@ -120,9 +120,10 @@ client.on("message", async message => {
           message.channel.send(MonEmbed);
         
           
-        }
+    }
 
 
+       
 
 
     const prefix = config.prefix
