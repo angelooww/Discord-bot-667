@@ -63,5 +63,6 @@ module.exports = {
                 })
 
         await message.channel.send(embed)
+        await message.delete({ timeout: 500 }).catch(console.error);
     }
 };

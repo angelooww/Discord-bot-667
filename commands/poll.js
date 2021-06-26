@@ -17,7 +17,7 @@ module.exports = {
         let Poll = await message.channel.send(
             new Discord.MessageEmbed()
             .setColor(`RANDOM`)
-            .setTitle(`📜 | Sondage`)
+            .setTitle(`📋 | Sondage`)
             .setDescription(`${Message}`)
             .setFooter(`Sondage créé par ${message.author.username}`)
             .setTimestamp()
@@ -26,8 +26,7 @@ module.exports = {
  
         await Poll.react(`${Poll_Emoji_1}`);
         await Poll.react(`${Poll_Emoji_2}`);
-        await message.delete
- 
+        await message.delete({ timeout: 500 }).catch(console.error);
  
     }
 }

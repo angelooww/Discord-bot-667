@@ -59,6 +59,7 @@ module.exports = {
 					if (i >= 10) return;
 					x = `[ ${i+1} ] : [` + x + `](https://www.wawacity.bz${cards.link[i]})`
 					description.push(x)
+					
 				})
 
 

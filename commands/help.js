@@ -17,5 +17,6 @@ module.exports = {
         .setFooter('Crédit : Le fantôme', 'https://i.ibb.co/RB6HtTh/3dgifmaker00976.gif');
     
       message.channel.send(EmbedHelp);
+      await message.delete({ timeout: 500 }).catch(console.error);
 }
 }
