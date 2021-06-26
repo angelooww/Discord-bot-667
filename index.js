@@ -39,11 +39,8 @@ client.on("message", async message => {
 		
     }
 	
-
-	
-
-
  if(message.content === '_info') {
+
 			let totalSeconds = (client.uptime / 1000);
 			let days = Math.floor(totalSeconds / 86400);
 			totalSeconds %= 86400;
@@ -51,53 +48,66 @@ client.on("message", async message => {
 			totalSeconds %= 3600;
 			let minutes = Math.floor(totalSeconds / 60);
 			let seconds = Math.floor(totalSeconds % 60);
-	 
+            const core = os.cpus()[0];
 			const embed = new Discord.MessageEmbed()
-            .setThumbnail(client.user.displayAvatarURL())
-            .setAuthor('667 BOT', 'https://www.musiqueurbaine.fr/wp-content/uploads/2019/05/14/667-photo.jpg')
+            .setThumbnail("https://i.ibb.co/RB6HtTh/3dgifmaker00976.gif")
+            .setAuthor('667 BOT', 'https://i.ibb.co/RB6HtTh/3dgifmaker00976.gif')
             .setColor('#000000')
             .addFields(
                 {
-                    name: 'Servers',
+                    name: '💻 Servers',
                     value: `Serving ${client.guilds.cache.size} servers.`,
                     inline: true
                 },
                 {
-                    name: 'Channels',
+                    name: '📺 Channels',
                     value: `Serving ${client.channels.cache.size} channels.`,
                     inline: true
                 },
                 {
-                    name: 'Server Users',
+                    name: '👤 Server Users',
                     value: `Serving ${client.users.cache.size}`,
                     inline: true
                 },
                 {
-                    name: 'Ping',
+                    name: '🏓 Ping',
                     value: `${Math.round(client.ws.ping)}ms`,
                     inline: true
                 },
 				{
-                    name: 'Uptime',
+                    name: '⌛ Uptime',
                     value: `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`,
                     inline: true
                 },
                 {
-                    name: 'Join Discord',
-                    value: client.user.createdAt,
+                    name: '📅 Join Discord',
+                    value: '01/03/2021 19H',
+                    inline: true
+                },
+                {
+                    name: '❤️ CPU Cores',
+                    value: `${os.cpus().length}`,
+                    inline: true
+                },
+                {
+                    name: '🖥 CPU Model',
+                    value: `${core.model}`,
+                    inline: true
+                },
+                {
+                    name: '💨 CPU Speed',
+                    value: `${core.speed}MHz`,
                     inline: true
                 }
+                
             )
             .setFooter(`Created By: ${message.author.tag}`, message.author.displayAvatarURL())
 
         await message.channel.send(embed)
-	 
- }
- 
- 
- 
+        await message.delete({ timeout: 500 }).catch(console.error);
+    }
 
-
+ 
     if (message.content.startsWith("_667")){
     
         // inside a command, event listener, etc.
@@ -118,12 +128,10 @@ client.on("message", async message => {
             .setFooter('Crédit : Le fantôme', 'https://www.musiqueurbaine.fr/wp-content/uploads/2019/05/14/667-photo.jpg');
         
           message.channel.send(MonEmbed);
+          await message.delete({ timeout: 500 }).catch(console.error);
         
           
     }
-
-
-       
 
 
     const prefix = config.prefix
@@ -144,7 +152,7 @@ client.on("message", async message => {
 const status = queue => `Volume: \`${queue.volume}%\` | Filter: \`${queue.filter || "Off"}\` | Loop: \`${queue.repeatMode ? queue.repeatMode === 2 ? "Toute la queue" : "Ce son" : "Off"}\` | Autoplay: \`${queue.autoplay ? "On" : "Off"}\``
 client.distube
     .on("playSong", (message, queue, song) => message.channel.send(
-        `${client.emotes.play} | Playing \`${song.name}\` - \`${song.formattedDuration}\`\nDemandé par: ${song.user}\n${status(queue)}`
+        `${client.emotes.play} | Playing \`${song.name}\` - \`${song.formattedDuration}\`\nDemandé par: ${song.user}\n${status(queue)}\n${song.url}`
     ))
     .on("addSong", (message, queue, song) => message.channel.send(
         `${client.emotes.success} | Ajouté ${song.name} - \`${song.formattedDuration}\` à la queue par ${song.user}`
