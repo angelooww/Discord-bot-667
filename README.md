@@ -33,9 +33,9 @@
 
 ## Usage
 
-HELP COMMAND
+⚠️ HELP COMMAND
 
-<img src="https://i.ibb.co/cYYGzFz/helpcommand.png">
+<img src="https://i.ibb.co/q9phbQr/Capture.png">
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
