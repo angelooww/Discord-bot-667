@@ -43,8 +43,6 @@ module.exports = {
 		    .addField("TRAILER",`https://www.youtube.com/watch?v=${body.data[0].attributes.youtubeVideoId}`)
         .setImage(body.data[0].attributes.coverImage.large)
         
-        
-        
         message.channel.send(embed)
         msg.delete();
         
@@ -52,9 +50,7 @@ module.exports = {
         msg.delete();
          return message.channel.send("Impossible de trouver l'animé !");
        }
-        
-        
-        
+
       }                 
 
     )})

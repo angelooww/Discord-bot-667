@@ -71,14 +71,8 @@ module.exports = {
 
 				msg.edit(embed)
 
-				let responses = await message.channel.awaitMessages(
-					msg => msg.author.id === message.author.id, {
-						time: 300000,
-						max: 1
-					}
-				);
 				
-
+				
 
 			})
 	}

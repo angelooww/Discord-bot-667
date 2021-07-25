@@ -6,6 +6,6 @@ module.exports = {
         const queue = client.distube.getQueue(message)
         if (!queue) return message.channel.send(`${client.emotes.error} | Il n'y a rien dans la file d'attente pour le moment !`)
         client.distube.stop(message)
-        message.channel.send(`**👋 A bientôt chez le 667**`)
+        message.channel.send(`**👋 A bientôt chez le 667 🏴‍☠️**`)
     }
 }
