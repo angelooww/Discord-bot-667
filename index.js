@@ -173,4 +173,4 @@ client.distube
     .on("searchCancel", message => message.channel.send(`${client.emotes.error} | Recherche annulée`))
     .on("error", (message, err) => message.channel.send(`${client.emotes.error} | Une erreur s'est produite: ${err}`))
 
-client.login("ODE2MDIyODA3NTk4MzM0MDA0.YD06dg.9eByRUg7R43WypV_NG0nvAuMhtI")
+client.login("")
