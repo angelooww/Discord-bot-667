@@ -1,13 +1,11 @@
 const DisTube = require("distube")
 const Discord = require("discord.js")
 const fetch = require("node-fetch");
-const { DiscordTogether } = require('discord-together');
 const client = new Discord.Client()
 const fs = require("fs")
 const config = require("./config.json")
 const os = require('os')
 
-client.discordTogether = new DiscordTogether(client);
 client.config = require("./config.json")
 client.distube = new DisTube(client, { searchSongs: true, emitNewSongOnly: true, leaveOnFinish: true})
 client.commands = new Discord.Collection()
@@ -41,57 +39,6 @@ client.on("message", async message => {
         message.channel.send(ping);
 		await message.delete({ timeout: 500 }).catch(console.error);
     }
-
-    if (message.content === '_youtube') {
-        const { channel } = message.member.voice;
-        if(!channel) return message.reply("Met toi dans un channel !")
-        if(message.member.voice.channel) {
-            client.discordTogether.createTogetherCode(message.member.voice.channelID, 'youtube').then(async invite => {
-                return message.channel.send(`${invite.code}`);
-            });
-        };
-    };
-
-    if (message.content === '_poker') {
-        const { channel } = message.member.voice;
-        if(!channel) return message.reply("Met toi dans un channel !")
-        if(message.member.voice.channel) {
-            client.discordTogether.createTogetherCode(message.member.voice.channelID, 'poker').then(async invite => {
-                return message.channel.send(`${invite.code}`);
-            });
-        };
-    };
-
-    if (message.content === '_chess') {
-        const { channel } = message.member.voice;
-        if(!channel) return message.reply("Met toi dans un channel !")
-        if(message.member.voice.channel) {
-            client.discordTogether.createTogetherCode(message.member.voice.channelID, 'chess').then(async invite => {
-                return message.channel.send(`${invite.code}`);
-            });
-        };
-    };
-
-    if (message.content === '_betrayal') {
-        const { channel } = message.member.voice;
-        if(!channel) return message.reply("Met toi dans un channel !")
-        if(message.member.voice.channel) {
-            client.discordTogether.createTogetherCode(message.member.voice.channelID, 'betrayal').then(async invite => {
-                return message.channel.send(`${invite.code}`);
-            });
-        };
-    };
-
-    if (message.content === '_fishing') {
-        const { channel } = message.member.voice;
-        if(!channel) return message.reply("Met toi dans un channel !")
-        if(message.member.voice.channel) {
-            client.discordTogether.createTogetherCode(message.member.voice.channelID, 'fishing').then(async invite => {
-                return message.channel.send(`${invite.code}`);
-            });
-        };
-    };
-
 	
  if(message.content === '_info') {
 
@@ -226,4 +173,4 @@ client.distube
     .on("searchCancel", message => message.channel.send(`${client.emotes.error} | Recherche annulée`))
     .on("error", (message, err) => message.channel.send(`${client.emotes.error} | Une erreur s'est produite: ${err}`))
 
-client.login("")
+client.login("ODE2MDIyODA3NTk4MzM0MDA0.YD06dg.9eByRUg7R43WypV_NG0nvAuMhtI")
