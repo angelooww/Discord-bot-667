@@ -11,7 +11,7 @@ module.exports = {
         .addField('⚠️ Information du bot :','```_info, _help```')
 		.addField('🎵 Musique :','```_p, _skip, _loop, _stop, _filter, _volume, _repeat, _pause, _queue, _resume```')
 		.addField('🎬 Recherche films,series,animes :','```_anime, _animeinfo, _film, _serie```')
-		.addField('✅ Autre :','```_clear, _sondage, _avatar, _covid, _667, _youtube, _spotify, _l1rank, _l1match, _tweet, _twitter, _simp```')
+		.addField('✅ Autre :','```_clear, _sondage, _avatar, _banner, _covid, _667, _youtube, _spotify, _l1rank, _l1match, _tweet, _twitter, _simp```')
         
         .setTimestamp()
         .setFooter('Crédit : Le fantôme', 'https://i.ibb.co/RB6HtTh/3dgifmaker00976.gif');

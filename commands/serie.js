@@ -23,7 +23,7 @@ module.exports = {
 
 
 		axios({
-				url: "https://www.wawacity.bz/?search=" + searchString + "&p=series"
+				url: "https://www.wawacity.one//?search=" + searchString + "&p=series"
 			})
 			.then(async function(res) {
 
@@ -57,7 +57,7 @@ module.exports = {
 
 				cards.title.forEach((x, i) => {
 					if (i >= 10) return;
-					x = `[ ${i+1} ] : [` + x + `](https://www.wawacity.bz${cards.link[i]})`
+					x = `[ ${i+1} ] : [` + x + `](https://www.wawacity.one/${cards.link[i]})`
 					description.push(x)
 					
 				})
