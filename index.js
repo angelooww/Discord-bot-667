@@ -5,6 +5,8 @@ const client = new Discord.Client()
 const fs = require("fs")
 const config = require("./config.json")
 const os = require('os')
+const { DiscordBanners } = require('discord-banners');
+const discordBanners = new DiscordBanners(client);
 
 client.config = require("./config.json")
 client.distube = new DisTube(client, { searchSongs: true, emitNewSongOnly: true, leaveOnFinish: true})
@@ -132,6 +134,16 @@ client.on("message", async message => {
           await message.delete({ timeout: 500 }).catch(console.error);
         
           
+    }
+
+    if(message.content === "_banner") {
+        const banner = await discordBanners.getBanner(message.author.id, { size: 2048, format: "png", dynamic: true })
+        const embed = new Discord.MessageEmbed()
+        .setTitle(`${message.author.username}'s banner`)
+        .setImage(banner)
+        .setColor("RANDOM")
+        if(banner) return message.channel.send(embed)
+        else if(!banner) return message.channel.send("Bannière introuvable !")
     }
 
     const prefix = config.prefix
