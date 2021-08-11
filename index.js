@@ -138,8 +138,9 @@ client.on("message", async message => {
 
     if(message.content === "_banner") {
         const banner = await discordBanners.getBanner(message.author.id, { size: 2048, format: "png", dynamic: true })
+        const user = message.mentions.members.first() || message.member
         const embed = new Discord.MessageEmbed()
-        .setTitle(`${message.author.username}'s banner`)
+        .setDescription(`<@${user.user.id}>'s banner`)
         .setImage(banner)
         .setColor("RANDOM")
         if(banner) return message.channel.send(embed)
