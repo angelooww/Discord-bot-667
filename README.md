@@ -7,27 +7,19 @@
 
 # 667 BOT
 
-667 BOT is a Discord Music BOT with specific commands for the 667 😉.
+667 BOT is a Discord Music BOT with slash commands 😉.
 
 ## Features
 
 - ▶️ Play Music
-- 🎥 Search Anime
-- 🎥 Search Movie
-- 🎥 Search Series
-- 📷 Get Avatar
 - 📑 And others !
 
 ## Requirements
 
-- [discord.js](https://discord.js.org) v12 or v13 - `npm install discord.js`
-- [Distube](https://distube.js.org/#/) - `npm install distube`
-- [FFmpeg](https://www.ffmpeg.org/download.html) - `npm install ffmpeg-static`
-- [@discordjs/opus](https://github.com/discordjs/opus) - `npm install @discordjs/opus`
-- [@distube/youtube-dl](https://www.npmjs.com/package/@distube/youtube-dl) - `npm install @distube/youtube-dl`
-- [Cheerio](https://cheerio.js.org/) - `npm install cheerio`
+- [discord.js](https://discord.js.org) v13 or v14 - `npm install discord.js`
+- [discordjs/voice](https://www.npmjs.com/package/@discordjs/voice) - `npm i @discordjs/voice`
+- [ffmpeg-static](https://www.npmjs.com/package/ffmpeg-static) - `npm i ffmpeg-static`
 - [Axios](https://www.npmjs.com/package/axios) - `npm install axios`
-- [Request-promise-native](https://www.npmjs.com/package/request-promise-native) - `npm install request-promise-native`
 - [OS](https://www.npmjs.com/package/os) - `npm install os`
 - [FS](https://www.npmjs.com/package/fs) - `npm install fs`
 
