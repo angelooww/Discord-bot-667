@@ -11,7 +11,7 @@
 
 ## Features
 
-- ▶️ Play Music from Youtube and Spotify
+- ▶️ Play Music from Youtube, Spotify and Soundcloud
 - 📑 And others !
 
 ## Requirements
